@@ -48,12 +48,16 @@ public class BookController {
 
         return bookService.saveBook(book);
     }
-
-
-
     @GetMapping(value = "/book-cheaper-then-price")
     public ResponseEntity<?> getBooksCheaperByPrice(@RequestParam(value = "price")double price){
         List<Book> books = bookService.getALlBooksCheaperThenPrice(price);
+        return ResponseEntity.ok(books);
+    }
+    @GetMapping(value="/gi")
+    public ResponseEntity<?> getBooksByPriceBetweenPrices
+                            (@RequestParam(value="priceFrom")double priceFrom,
+                             @RequestParam(value="priceTo") double priceTo){
+        List<Book> books = bookService.getBooksByPriceBetweenPrices(priceFrom,priceTo);
         return ResponseEntity.ok(books);
     }
 
