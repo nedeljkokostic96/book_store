@@ -53,7 +53,7 @@ public class BookController {
         List<Book> books = bookService.getALlBooksCheaperThenPrice(price);
         return ResponseEntity.ok(books);
     }
-    @GetMapping(value="/gi")
+    @GetMapping(value="/book-price-between-prices")
     public ResponseEntity<?> getBooksByPriceBetweenPrices
                             (@RequestParam(value="priceFrom")double priceFrom,
                              @RequestParam(value="priceTo") double priceTo){
