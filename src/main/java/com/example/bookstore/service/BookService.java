@@ -22,4 +22,5 @@ public interface BookService {
 
     List<BookResponse> getBooksByGenre(int genre);
 
+    List<Book> getALlBooksCheaperThenPrice(double price);
 }

@@ -54,4 +54,11 @@ public class BookServiceImpl implements BookService {
                 .map(x -> BookMapper.mapEntityToResponse(x))
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public List<Book> getALlBooksCheaperThenPrice(double price) {
+        List<Book> books = bookRepository.findAll();
+        books.stream().filter(x-> x.getPrice() < price).collect(Collectors.toList());
+        return books;
+    }
 }
