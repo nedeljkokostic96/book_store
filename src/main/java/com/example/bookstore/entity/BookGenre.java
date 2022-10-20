@@ -18,11 +18,11 @@ public class BookGenre {
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name = "id_book")
+    @JoinColumn(name = "book_id")
     private Book book;
 
     @ManyToOne
-    @JoinColumn(name = "id_genre")
+    @JoinColumn(name = "genre_id")
     private Genre genre;
 
 }
