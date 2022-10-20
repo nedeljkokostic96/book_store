@@ -26,5 +26,11 @@ public class WriterServiceImpl implements WriterService {
         return ResponseEntity.ok(writers);
     }
 
+    @Override
+    public Writer getWriterByBook(String title) {
+        Writer writer = writerRepository.findByBook(title);
+        return writer;
+    }
+
 
 }

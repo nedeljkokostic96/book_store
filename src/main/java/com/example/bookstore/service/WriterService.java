@@ -12,4 +12,5 @@ public interface WriterService {
 
 
     ResponseEntity<?> getAllWritersOrderByDateOfBirth();
+    Writer getWriterByBook(String title);
 }
