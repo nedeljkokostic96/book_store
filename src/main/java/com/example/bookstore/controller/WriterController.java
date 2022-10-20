@@ -17,5 +17,9 @@ public class WriterController {
     public ResponseEntity<?> getAllWriters(){
         return writerService.getAllWriters();
     }
+    @GetMapping(value = "/getWriters/orderedByBirthYear")
+    public ResponseEntity<?> getAllWritersOrderByDateOfBirth(){
+        return writerService.getAllWritersOrderByDateOfBirth();
+    }
 
 }

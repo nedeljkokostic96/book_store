@@ -19,4 +19,12 @@ public class WriterServiceImpl implements WriterService {
         List<Writer> writers = writerRepository.findAll();
         return ResponseEntity.ok(writers);
     }
+
+    @Override
+    public ResponseEntity<?> getAllWritersOrderByDateOfBirth() {
+        List<Writer> writers = writerRepository.findAllByOrderByDateOfBirth();
+        return ResponseEntity.ok(writers);
+    }
+
+
 }

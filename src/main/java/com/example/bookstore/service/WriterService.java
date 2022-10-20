@@ -11,4 +11,5 @@ public interface WriterService {
     public ResponseEntity<?> getAllWriters();
 
 
+    ResponseEntity<?> getAllWritersOrderByDateOfBirth();
 }
