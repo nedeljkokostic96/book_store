@@ -22,6 +22,7 @@ public class Writer {
     private String firstName;
     @Column(name = "lastname", nullable = false)
     private String lastName;
+    @Column(name = "autobiography")
     private String autobiography;
     @Column(name = "birthyear")
     private int dateOfBirth;

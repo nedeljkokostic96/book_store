@@ -22,4 +22,7 @@ public interface BookService {
 
     List<BookResponse> getBooksByGenre(int genre);
 
+    List<Book> getALlBooksCheaperThenPrice(double price);
+
+    List<Book> getBooksByPriceBetweenPrices(double priceFrom, double priceTo);
 }
