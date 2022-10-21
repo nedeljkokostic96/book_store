@@ -1,5 +1,6 @@
 package com.example.bookstore.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,5 +21,6 @@ public class Role {
     @Column(name = "title", nullable = false)
     private String title;
     @OneToMany(mappedBy ="role",fetch = FetchType.LAZY)
+    @JsonIgnore
     private List<User> userList;
 }
